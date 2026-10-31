@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Plate Freetown | About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🍲 Fresh Plate</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="menu.html" class="btn btn-primary" style="color: #fff; padding: 8px 16px;">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section (Wireframe Fig 3) -->
+  <section class="container">
+    
+    <!-- About Intro Hero -->
+    <div class="grid-2" style="background: var(--bg-white); padding: 35px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 30px;">
+      <div>
+        <h2 class="section-title">About Fresh Plate Freetown</h2>
+        <p class="card-text">
+          Fresh Plate Freetown was established to bridge the gap between traditional local dining and modern convenience. We serve freshly prepared meals designed to satisfy students, working professionals, and families alike[cite: 8].
+        </p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" style="border-radius: 8px;">
+      </div>
+    </div>
+
+    <!-- Story & Vision Grid -->
+    <div class="grid-2" style="margin-bottom: 35px;">
+      <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: 100%;">
+        <h3 style="margin-bottom: 12px; color: var(--primary-color);">Our Story</h3>
+        <p class="card-text">
+          Founded in the heart of Freetown, our kitchen started with a passion for authentic culinary heritage. Recognizing how difficult it was for busy students and professionals to find up-to-date menus and reliable ordering, we created this digital platform to bring our kitchen directly to your fingertips[cite: 8].
+        </p>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: 100%;">
+        <h3 style="margin-bottom: 12px; color: var(--primary-color);">Our Vision</h3>
+        <p class="card-text">
+          To become Freetown's most trusted and accessible online food ordering platform, renowned for uncompromising food quality, transparent pricing, and exceptional customer service[cite: 8].
+        </p>
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div style="background-color: var(--bg-white); padding: 35px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="margin-bottom: 25px; color: var(--secondary-color);">Why Choose Us?</h3>
+      <div class="grid-4" style="text-align: center;">
+        <div style="padding: 15px; border: 1px solid var(--border-color); border-radius: 6px;">
+          <h4 style="color: var(--primary-color); margin-bottom: 8px;">Fresh Ingredients</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Sourced daily from local markets.</p>
+        </div>
+        <div style="padding: 15px; border: 1px solid var(--border-color); border-radius: 6px;">
+          <h4 style="color: var(--primary-color); margin-bottom: 8px;">Skilled Chefs</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Masters of authentic Sierra Leonean recipes.</p>
+        </div>
+        <div style="padding: 15px; border: 1px solid var(--border-color); border-radius: 6px;">
+          <h4 style="color: var(--primary-color); margin-bottom: 8px;">Easy Ordering</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Simple online cart and checkout flow.</p>
+        </div>
+        <div style="padding: 15px; border: 1px solid var(--border-color); border-radius: 6px;">
+          <h4 style="color: var(--primary-color); margin-bottom: 8px;">Friendly Service</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Dedicated customer support team.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Fresh Plate Freetown</h3>
+        <p style="color: #a0aec0; font-size: 0.9rem; margin-top: 5px;">Delicious local meals made easy.</p>
+      </div>
+      <div>
+        <ul style="display: flex; gap: 20px; font-weight: 600;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Fresh Plate Freetown. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

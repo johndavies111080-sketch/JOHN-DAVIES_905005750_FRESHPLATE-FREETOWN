@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Plate Freetown | Menu & Online Ordering</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Category Tabs */
+    .category-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 8px 18px;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
+
+    /* Filter Sidebar & Layout */
+    .menu-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 25px;
+    }
+    .filter-sidebar {
+      background: var(--bg-white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
+    .filter-section {
+      margin-bottom: 20px;
+    }
+    .filter-section h4 {
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+      font-size: 1rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+    }
+    .filter-section label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    /* Cart / Order Panel */
+    .order-panel {
+      background: var(--bg-white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 25px;
+    }
+
+    @media (max-width: 800px) {
+      .menu-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🍲 Fresh Plate</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="menu.html" class="btn btn-primary" style="color: #fff; padding: 8px 16px;">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section (Wireframe Fig 6) -->
+  <section class="container">
+    <h2 class="section-title">Menu & Online Ordering</h2>
+
+    <!-- Search Bar -->
+    <div style="background: var(--bg-white); padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 25px;">
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="text" class="form-control" placeholder="Search for dishes (e.g. Jollof Rice, Soup)..." style="flex: 1; min-width: 240px;">
+        <button class="btn btn-primary" onclick="alert('Searching menu...')">Search Dishes</button>
+      </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active">All Dishes</button>
+      <button class="tab-btn">Main Meals</button>
+      <button class="tab-btn">Soups & Stews</button>
+      <button class="tab-btn">Snacks</button>
+      <button class="tab-btn">Drinks</button>
+      <button class="tab-btn">Desserts</button>
+    </div>
+
+    <!-- Layout: Sidebar Filter + Results -->
+    <div class="menu-layout">
+      
+      <!-- Filter Sidebar -->
+      <div class="filter-sidebar">
+        <h3 style="margin-bottom: 15px; color: var(--secondary-color); font-size: 1.1rem;">Filter Menu</h3>
+
+        <div class="filter-section">
+          <h4>Price Range[cite: 8]</h4>
+          <label><input type="checkbox"> Under Le 50</label>
+          <label><input type="checkbox"> Le 50 - Le 100</label>
+          <label><input type="checkbox"> Le 101 - Le 150</label>
+          <label><input type="checkbox"> Over Le 150</label>
+        </div>
+
+        <div class="filter-section">
+          <h4>Dietary Options[cite: 8]</h4>
+          <label><input type="checkbox"> Vegetarian</label>
+          <label><input type="checkbox"> Spicy</label>
+          <label><input type="checkbox"> Chef Special</label>
+        </div>
+
+        <button class="btn btn-secondary" style="width: 100%; font-size: 0.9rem;" onclick="alert('Filters applied!')">Apply Filters</button>
+      </div>
+
+      <!-- Dish Result Cards Grid -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+          <span style="font-weight: 600; color: var(--text-muted);">Showing 6 available dishes</span>
+          <select class="form-control" style="width: 180px; padding: 6px;">
+            <option>Sort by: Popular</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+
+        <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=500&q=80" alt="Jollof Rice & Chicken">
+            <div class="card-body">
+              <h3 class="card-title">Jollof Rice & Chicken</h3>
+              <p class="card-text">Classic Sierra Leonean rice with chicken and rich tomato flavor.</p>
+              <div class="card-price">Le 75.00</div>
+              <button class="btn btn-primary" style="width: 100%;" onclick="alert('Added Jollof Rice & Chicken to order!')">Add to Order</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Cassava Leaf & Rice">
+            <div class="card-body">
+              <h3 class="card-title">Cassava Leaf & Rice</h3>
+              <p class="card-text">Traditional cassava leaf stew served with warm steamed rice.</p>
+              <div class="card-price">Le 80.00</div>
+              <button class="btn btn-primary" style="width: 100%;" onclick="alert('Added Cassava Leaf & Rice to order!')">Add to Order</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&q=80" alt="Fried Fish & Plantain">
+            <div class="card-body">
+              <h3 class="card-title">Fried Fish & Plantain</h3>
+              <p class="card-text">Crispy fried fish with golden sweet plantains and pepper sauce.</p>
+              <div class="card-price">Le 90.00</div>
+              <button class="btn btn-primary" style="width: 100%;" onclick="alert('Added Fried Fish & Plantain to order!')">Add to Order</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" alt="Groundnut Stew">
+            <div class="card-body">
+              <h3 class="card-title">Groundnut Stew</h3>
+              <p class="card-text">Rich peanut stew prepared with tender beef and rice.</p>
+              <div class="card-price">Le 85.00</div>
+              <button class="btn btn-primary" style="width: 100%;" onclick="alert('Added Groundnut Stew to order!')">Add to Order</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Your Order Panel (Wireframe Fig 6) -->
+        <div class="order-panel">
+          <h3 style="margin-bottom: 12px; color: var(--secondary-color);">Your Order</h3>
+          <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+            <span>1x Jollof Rice & Chicken</span>
+            <strong>Le 75.00</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding: 12px 0; font-size: 1.1rem; margin-bottom: 15px;">
+            <span>Total:</span>
+            <strong style="color: var(--primary-color);">Le 75.00</strong>
+          </div>
+          <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+            <label><input type="radio" name="delivery" checked> Delivery</label>
+            <label><input type="radio" name="delivery"> Pickup</label>
+          </div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="alert('Order placed successfully! Confirmation sent.')">Proceed to Checkout</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Fresh Plate Freetown</h3>
+        <p style="color: #a0aec0; font-size: 0.9rem; margin-top: 5px;">Delicious local meals made easy.</p>
+      </div>
+      <div>
+        <ul style="display: flex; gap: 20px; font-weight: 600;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Fresh Plate Freetown. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
